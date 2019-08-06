@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>Caculator</p>
+    <input type="number" id="numberOne" value=""/>
+    <input type="number" id="numberTwo" value="">
+    <br>
+
+    <button name="button" type="button" onclick="myFunction('cong')">Addition(+)</button>
+    <button name="button" type="button" onclick="myFunction('tru')">Subtraction(-)</button>
+    <button name="button" type="button" onclick="myFunction('nhan')">Multiplication(X)</button>
+    <button name="button" type="button" onclick="myFunction('chia')">Division(/)</button>
+    <br>
+    Ket qua: <p id="ketqua"></p>
+    <script>
+        function myFunction(pheptinh) {
+            console.log(pheptinh);
+            let a = Number(document.getElementById("numberOne").value);
+            let b = Number(document.getElementById("numberTwo").value);
+            let ketqua;
+            if (pheptinh == 'cong') {
+                ketqua = (a + b);
+            }
+            if (pheptinh == 'tru') {
+                ketqua = (a - b);
+            }
+            if (pheptinh == 'nhan') {
+                ketqua = (a * b)
+            }
+            if (pheptinh == 'chia') {
+                ketqua = (a / b)
+            }
+            document.getElementById('ketqua').innerHTML = ketqua;
+        }
+    </script>
+
+</form>
+</body>
+</html>
